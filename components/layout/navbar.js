@@ -1,23 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
-import logo from "../../public/Assets/logo.png";
+import logo from "../../Assets/logo.png";
 const navbar = () => {
   const [state, setState] = useState(false);
 
-  const navigation = [
-    { title: "Customers", path: "javascript:void(0)" },
-    { title: "Careers", path: "javascript:void(0)" },
-    { title: "Guides", path: "javascript:void(0)" },
-    { title: "Partners", path: "javascript:void(0)" },
-  ];
+  const router = useRouter();
   return (
     <>
-      <nav className="bg-white w-full border-b md:border-0 md:static">
-        <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
+      <nav className="bg-info border-b md:border-0 md:static">
+        <div className="items-center w-10/12 mx-auto md:flex">
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link href="/">
-              <img src={logo} width={120} height={50} alt="One tap" />
-              <p>One Tap</p>
+            <Link href="/" className="flex">
+              <Image src={logo} alt="Logo" width={25} height={25} />
+              <p className="text-base font-lato font-bold text-primary ml-1 ">
+                One Tap
+              </p>
             </Link>
             <div className="md:hidden">
               <button
@@ -62,19 +61,59 @@ const navbar = () => {
             }`}
           >
             <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {navigation.map((item, idx) => {
-                return (
-                  <li key={idx} className="text-gray-600 hover:text-indigo-600">
-                    <a href={item.path}>{item.title}</a>
-                  </li>
-                );
-              })}
+              <Link href="/">
+                <li
+                  className={
+                    router.pathname == "/"
+                      ? "text-base font-lato font-bold text-primary uppercase"
+                      : "text-base font-lato font-bold text-base-300 uppercase"
+                  }
+                >
+                  Home
+                </li>
+              </Link>
+
+              <Link href="/shop">
+                <li
+                  className={
+                    router.pathname == "/shop"
+                      ? "text-base font-lato font-bold text-primary uppercase"
+                      : "text-base font-lato font-bold text-base-300 uppercase"
+                  }
+                >
+                  Shop
+                </li>
+              </Link>
+
+              <Link href="/about">
+                <li
+                  className={
+                    router.pathname == "/about"
+                      ? "text-base font-lato font-bold text-primary uppercase"
+                      : "text-base font-lato font-bold text-base-300 uppercase"
+                  }
+                >
+                  About
+                </li>
+              </Link>
+
+              <Link href="/contact">
+                <li
+                  className={
+                    router.pathname == "/contact"
+                      ? "text-base font-lato font-bold text-primary uppercase"
+                      : "text-base font-lato font-bold text-base-300 uppercase"
+                  }
+                >
+                  Contact
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="hidden md:inline-block">
             <a
               href="javascript:void(0)"
-              className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
+              className="py-3 px-4 text-base font-lato font-bold text-neutral uppercase bg-primary hover:text-secondary rounded-md shadow"
             >
               Get Started
             </a>

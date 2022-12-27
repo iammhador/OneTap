@@ -1,30 +1,30 @@
 const footer = () => {
   return (
     <>
-      <div className="bg-base-200">
+      <div className="bg-info">
         <footer className="footer w-11/12 mx-auto p-10 text-base-content ">
           <div>
-            <span className="footer-title">Services</span>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <span className="text-lg font-lato text-primary">Services</span>
+            <a className="text-base-300 text-base font-lato ">Branding</a>
+            <a className="text-base-300 text-base font-lato ">Design</a>
+            <a className="text-base-300 text-base font-lato ">Marketing</a>
+            <a className="text-base-300 text-base font-lato ">Advertisement</a>
           </div>
           <div>
-            <span className="footer-title">Company</span>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <span className="text-lg font-lato text-primary">Company</span>
+            <a className="text-base-300 text-base font-lato ">About us</a>
+            <a className="text-base-300 text-base font-lato ">Contact</a>
+            <a className="text-base-300 text-base font-lato ">Jobs</a>
+            <a className="text-base-300 text-base font-lato ">Press kit</a>
           </div>
           <div>
-            <span className="footer-title">Legal</span>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
+            <span className="text-lg font-lato text-primary">Legal</span>
+            <a className="text-base-300 text-base font-lato ">Terms of use</a>
+            <a className="text-base-300 text-base font-lato ">Privacy policy</a>
+            <a className="text-base-300 text-base font-lato ">Cookie policy</a>
           </div>
         </footer>
-        <footer className="footer w-11/12 mx-auto px-10 py-4 border-t text-base-content border-base-300">
+        <footer className="footer w-11/12 mx-auto px-10 py-4 border-t text-base-300 text-base font-lato  border-base-300">
           <div className="items-center grid-flow-col">
             <svg
               width="24"
